@@ -5,6 +5,9 @@ metadata:
   name: lbastethellokubernetes 
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: lbastethellokubernetes
   template:
     metadata:
       labels:
