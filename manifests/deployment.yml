@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: lbastethellokubernetes 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: lbastethellokubernetes 
+    spec:
+      containers:
+        - name: lbastethellokubernetes 
+          image: akscontainerlb.azurecr.io/lbastethellokubernetes
+          ports:
+          - containerPort: 80
